@@ -11,7 +11,7 @@
         <!--FireWorks-->
         <scene sceneID="8qg-kU-gdu">
             <objects>
-                <viewController id="jtY-UV-hGt" customClass="FireWorksVC" customModule="iOS_CoreAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FireWorksVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jtY-UV-hGt" customClass="FireWorksVC" customModule="iOS_CoreAnimation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sDM-wU-nbe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,6 +36,25 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E43-Zl-zIH">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="idCell" textLabel="ZPD-xj-aIO" style="IBUITableViewCellStyleDefault" id="0rG-fG-4Ko">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0rG-fG-4Ko" id="fZf-Yx-YRX">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZPD-xj-aIO">
+                                                    <rect key="frame" x="16" y="0.0" width="288" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z9U-50-Fhr"/>
@@ -52,7 +71,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="table" destination="E43-Zl-zIH" id="hjP-PP-FHn"/>
-                        <segue destination="jtY-UV-hGt" kind="show" id="b4T-5a-xDU"/>
+                        <segue destination="jtY-UV-hGt" kind="show" identifier="toFireWorksVC" id="b4T-5a-xDU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PwK-OF-4LT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
