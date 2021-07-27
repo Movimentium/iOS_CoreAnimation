@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5A5-ag-XA8">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FireWorks-->
+        <scene sceneID="8qg-kU-gdu">
+            <objects>
+                <viewController id="jtY-UV-hGt" customClass="FireWorksVC" customModule="iOS_CoreAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sDM-wU-nbe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="sKp-zV-4Pg"/>
+                        <color key="backgroundColor" red="0.14509803921568626" green="0.18431372549019609" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="FireWorks" id="LbN-vP-7k1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fw1-zF-Ina" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="413" y="214"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="qPo-t5-Qox">
+            <objects>
+                <viewController id="nVR-fU-WYr" customClass="MainVC" customModule="iOS_CoreAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i86-rC-W1z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E43-Zl-zIH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Z9U-50-Fhr"/>
+                        <color key="backgroundColor" red="0.1450980392" green="0.1843137255" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E43-Zl-zIH" firstAttribute="top" secondItem="Z9U-50-Fhr" secondAttribute="top" id="9D3-tm-j0B"/>
+                            <constraint firstItem="Z9U-50-Fhr" firstAttribute="trailing" secondItem="E43-Zl-zIH" secondAttribute="trailing" id="PKb-8m-2Vx"/>
+                            <constraint firstItem="Z9U-50-Fhr" firstAttribute="bottom" secondItem="E43-Zl-zIH" secondAttribute="bottom" id="hIh-fb-Um3"/>
+                            <constraint firstItem="E43-Zl-zIH" firstAttribute="leading" secondItem="Z9U-50-Fhr" secondAttribute="leading" id="sbQ-WD-TkJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Main" id="BgQ-sp-dZV">
+                        <barButtonItem key="backBarButtonItem" title=" " id="NXm-Ss-xQE"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="table" destination="E43-Zl-zIH" id="hjP-PP-FHn"/>
+                        <segue destination="jtY-UV-hGt" kind="show" id="b4T-5a-xDU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PwK-OF-4LT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-365.625" y="214.43661971830986"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BCC-A2-MSK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5A5-ag-XA8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Tbv-NP-aK3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.26158069017594537" green="0.29246642661030225" blue="0.70934238418082196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nVR-fU-WYr" kind="relationship" relationship="rootViewController" id="SUS-Zo-vdG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7QY-BM-H6N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1129" y="214"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
